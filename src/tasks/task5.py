@@ -11,10 +11,10 @@ def task5(scores: list[int]) -> list[int]:
     result = []
 
     for index,score in enumerate(scores):
-        if index != scores[-1]:
-            result.append(score + scores[index + 1])
-        elif index == scores[-1]:
+        if index == scores[-1]:
             result.append(score * score)
+        else:
+            result.append(score + scores[index + 1])
 
 
     return result
