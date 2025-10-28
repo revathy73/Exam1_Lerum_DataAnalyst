@@ -6,8 +6,10 @@ def task2(votes: str) -> str:
     #high_votes = votes[0]
     result = 0
     value = 0
-    for letter in votes:
-        value == votes.count(letter)
+    for vote in votes:
+        value = votes.count(vote)
+        if value > len(votes):
+            result = value
 
 
     if value == "A":
