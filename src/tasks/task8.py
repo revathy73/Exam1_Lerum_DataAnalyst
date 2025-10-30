@@ -7,7 +7,7 @@ def task8(text: str) -> str:
         result = ""
 
     result = ""
-    text_new  =""
+    text_new  = ""
     for letter in reversed(text):
         text_new += letter
 
