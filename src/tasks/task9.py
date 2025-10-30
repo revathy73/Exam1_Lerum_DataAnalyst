@@ -1,4 +1,5 @@
 import string
+from curses.ascii import isupper, islower, isdigit
 
 from unicodedata import digit
 
@@ -24,7 +25,7 @@ def task9(username: str) -> bool:
     if (len(username) < 5 or len(username) > 12):
         return False
 
-    if (username[0] != alphabet  or username[0] != alphabet1):
+    if username[0] != alphabet :
         return False
 
     if username[-1] == special:
@@ -39,12 +40,12 @@ def task9(username: str) -> bool:
     has_underscore = False
 
     for letter in username:
-        if letter == has_upper:
-            result = True
-        elif letter == has_lower:
-            result = True
-        elif letter == has_digit:
-            result = True
+        if letter == isupper():
+            has_upper = True
+        elif letter == islower():
+            has_lower = True
+        elif letter == isdigit():
+            has_digit = True
         elif letter == has_underscore:
             result = True
         else:

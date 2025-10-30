@@ -4,9 +4,12 @@ from to_do import TODO
 def task10(classroom: list[str], student: str) -> int:
 
     result = 0
-    = set(student)
+    for index,string in enumerate(classroom):
+        if string.lower() == student.lower():
+                result += index
 
     return result
+
 
 if __name__ == "__main__":
 
